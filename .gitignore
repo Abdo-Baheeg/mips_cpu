@@ -1,0 +1,66 @@
+# Xilinx ISE / Vivado generated files
+*.bit
+*.bin
+*.mcs
+*.prj
+*.xise
+*.xst
+*.ngc
+*.ngd
+*.ncd
+*.twr
+*.twx
+*.bgn
+*.bld
+*.drc
+*.map
+*.mrp
+*.ncd
+*.ngm
+*.par
+*.pcf
+*.ptwx
+*.tcf
+*.tcl
+*.unroutes
+*.xrpt
+*.xwbt
+*.syr
+
+# Vivado project folder
+*.runs/
+*.cache/
+*.sim/
+*.hw/
+*.ip_user_files/
+*.Xil/
+*.data/
+*.sdk/
+*.webtalk/
+
+# Logs and temporary files
+*.log
+*.jou
+*.str
+*.xml
+*.tmp
+*.backup
+*.lso
+*.lst
+*.rpt
+
+
+
+# Generated simulation waves
+*.wlf
+*.vcd
+
+# OS & editor files
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+
+# Build directories
+build/
+output/
