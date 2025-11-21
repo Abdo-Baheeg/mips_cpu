@@ -1,0 +1,7 @@
+vhdtdtfi -lib work src/components/mux4to1.vhd -prj mips_cpu -o mux4to1.spl -module mux4to1 -template /opt/Xilinx/14.7/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family artix7 mux4to1.spl /home/abdo-bahig/mips_cpu/mux4to1.sym 
+xst -intstyle ise -ifn "/home/abdo-bahig/mips_cpu/mux4to1.xst" -ofn "/home/abdo-bahig/mips_cpu/mux4to1.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc7a100t-csg324-3 mux4to1.ngc mux4to1.ngd  
+map -intstyle ise -p xc7a100t-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o mux4to1_map.ncd mux4to1.ngd mux4to1.pcf 
+par -w -intstyle ise -ol high -mt off mux4to1_map.ncd mux4to1.ncd mux4to1.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml mux4to1.twx mux4to1.ncd -o mux4to1.twr mux4to1.pcf 

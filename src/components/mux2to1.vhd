@@ -2,9 +2,9 @@
 -- Company: 
 -- Engineer: 
 -- 
--- Create Date:    21:25:35 11/21/2025 
+-- Create Date:    23:18:01 11/21/2025 
 -- Design Name: 
--- Module Name:    test - Behavioral 
+-- Module Name:    mux2to1 - Behavioral 
 -- Project Name: 
 -- Target Devices: 
 -- Tool versions: 
@@ -20,24 +20,21 @@
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 
-entity MUX2to1 is
+entity mux2to1 is
     Port (
-        A    : in  STD_LOGIC;
-        B    : in  STD_LOGIC;
-        Sel  : in  STD_LOGIC;
-        Y    : out STD_LOGIC
+				a : in  STD_LOGIC_VECTOR (31 downto 0);
+				b : in  STD_LOGIC_VECTOR (31 downto 0);
+				y : out  STD_LOGIC_VECTOR (31 downto 0);
+				sel  : in  STD_LOGIC;
+        
     );
 end MUX2to1;
 
 architecture Behavioral of MUX2to1 is
 begin
-    process(A, B, Sel)
+    process(a,b,sel)
     begin
-        if Sel = '0' then
-            Y <= A;
-        else
-            Y <= B;
-        end if;
+        y <= a when sel = '0' else b;
     end process;
 end Behavioral;
 
