@@ -3,7 +3,6 @@
 *.bin
 *.mcs
 *.prj
-*.xise
 *.xst
 *.ngc
 *.ngd
